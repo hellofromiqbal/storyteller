@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar/>
         <NextUiProvider>
-          <main className="flex flex-col px-5 md:px-20">
+          <main className="flex flex-col max-w-[1440px] mx-auto">
             {children}
           </main>
         </NextUiProvider>

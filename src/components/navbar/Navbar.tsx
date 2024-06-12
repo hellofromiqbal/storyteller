@@ -22,14 +22,14 @@ export default function Navbar() {
   ];
 
   return (
-    <NextUINavbar onMenuOpenChange={setIsMenuOpen} isBordered maxWidth='xl' className='absolute top-0'>
+    <NextUINavbar onMenuOpenChange={setIsMenuOpen} isBordered maxWidth='xl' className='absolute top-0 max-w-[1440px] mx-auto'>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand>
-          <h1 className='text-2xl font-extrabold'>Yournalist.</h1>
+          <h1 className='text-2xl font-extrabold'>Storyteller.</h1>
         </NavbarBrand>
       </NavbarContent>
 
