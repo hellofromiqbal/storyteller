@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 
 import React, { useState } from 'react';
@@ -36,17 +37,17 @@ export default function Navbar() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <NextUILink href="#" className='text-black'>
-            Features
+            Now Trending
           </NextUILink>
         </NavbarItem>
         <NavbarItem isActive>
           <NextUILink href="#" className='text-black'>
-            Customers
+            Recently Added
           </NextUILink>
         </NavbarItem>
         <NavbarItem>
           <NextUILink href="#" className='text-black'>
-            Integrations
+            Editor's Choice
           </NextUILink>
         </NavbarItem>
       </NavbarContent>
