@@ -1,41 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
+import Link from "next/link";
 import sitting0 from '@/assets/images/avatar/sitting0.png';
 import sitting1 from '@/assets/images/avatar/sitting1.png';
 import bust7 from '@/assets/images/avatar/bust7.png';
-
-import spacex from '@/assets/images/articles/spacex.jpg';
-import cat from '@/assets/images/articles/cat.jpg';
-import art from '@/assets/images/articles/art.jpg';
-import Link from "next/link";
 import StoryCard from "@/components/StoryCard/StoryCard";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import SectionLink from "@/components/SectionLink/SectionLink";
+import { staticStories } from "@/assets/data/static";
 
 export default function Home() {
-  const tempStories = [
-    {
-      id: 1,
-      title: 'SpaceX Launces Its Space Rocket',
-      shortDesc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!',
-      imgUrl: spacex,
-      href: "#"
-    },
-    {
-      id: 2,
-      title: 'Why Do Cats Purring?',
-      shortDesc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!',
-      imgUrl: cat,
-      href: "#"
-    },
-    {
-      id: 3,
-      title: 'Art Expo In Russia',
-      shortDesc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!',
-      imgUrl: art,
-      href: "#"
-    },
-  ];
 
   return (
     <>
@@ -69,7 +43,7 @@ export default function Home() {
       <section className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
         <SectionTitle title="Trending Stories"/>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
-          {tempStories.map((story) => (
+          {staticStories.map((story) => (
             <StoryCard key={story.id} story={story}/>
           ))}
         </div>
@@ -80,7 +54,7 @@ export default function Home() {
       <section className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
         <SectionTitle title="New Stories"/>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
-          {tempStories.map((story) => (
+          {staticStories.map((story) => (
             <StoryCard key={story.id} story={story}/>
           ))}
         </div>
@@ -112,7 +86,7 @@ export default function Home() {
       <section className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
         <SectionTitle title="Editor's Choice"/>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
-          {tempStories.map((story) => (
+          {staticStories.map((story) => (
             <StoryCard key={story.id} story={story}/>
           ))}
         </div>
