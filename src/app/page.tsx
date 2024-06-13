@@ -8,8 +8,35 @@ import spacex from '@/assets/images/articles/spacex.jpg';
 import cat from '@/assets/images/articles/cat.jpg';
 import art from '@/assets/images/articles/art.jpg';
 import Link from "next/link";
+import StoryCard from "@/components/StoryCard/StoryCard";
+import SectionTitle from "@/components/SectionTitle/SectionTitle";
+import SectionLink from "@/components/SectionLink/SectionLink";
 
 export default function Home() {
+  const tempStories = [
+    {
+      id: 1,
+      title: 'SpaceX Launces Its Space Rocket',
+      shortDesc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!',
+      imgUrl: spacex,
+      href: "#"
+    },
+    {
+      id: 2,
+      title: 'Why Do Cats Purring?',
+      shortDesc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!',
+      imgUrl: cat,
+      href: "#"
+    },
+    {
+      id: 3,
+      title: 'Art Expo In Russia',
+      shortDesc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!',
+      imgUrl: art,
+      href: "#"
+    },
+  ];
+
   return (
     <>
       {/* Jumbotron */}
@@ -38,116 +65,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Now Trending */}
+      {/* Trending Stories */}
       <section className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
-        <h2 className="text-2xl md:text-3xl font-bold">Now Trending</h2>
+        <SectionTitle title="Trending Stories"/>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
-          <div className="flex flex-col h-max md:h-[400px] lg:h-[430px]">
-            <div className="h-[250px] bg-gray-400">
-              <Image
-                src={spacex}
-                alt="article-image"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col gap-1 h-full md:justify-between py-2">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">SpaceX Launces Its Space Rocket</h3>
-                <p className="text-sm md:text-base text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!</p>
-              </div>
-              <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={"#"}>Read More</Link>
-            </div>
-          </div>
-          <div className="flex flex-col h-max md:h-[400px] lg:h-[430px]">
-            <div className="h-[250px] bg-gray-400">
-              <Image
-                src={cat}
-                alt="article-image"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col gap-1 h-full md:justify-between py-2">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">Why Do Cats Purring?</h3>
-                <p className="text-sm md:text-base text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!</p>
-              </div>
-              <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={"#"}>Read More</Link>
-            </div>
-          </div>
-          <div className="flex flex-col h-max md:h-[400px] lg:h-[430px]">
-            <div className="h-[250px] bg-gray-400">
-              <Image
-                src={art}
-                alt="article-image"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col gap-1 h-full md:justify-between py-2">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">Art Expo In Russia</h3>
-                <p className="text-sm md:text-base text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!</p>
-              </div>
-              <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={"#"}>Read More</Link>
-            </div>
-          </div>
+          {tempStories.map((story) => (
+            <StoryCard key={story.id} story={story}/>
+          ))}
         </div>
-        <Link className="px-2 py-1 w-max bg-black text-white mx-auto" href={"#"}>See More</Link>
+        <SectionLink/>
       </section>
 
-      {/* Recently Posted */}
+      {/* New Stories */}
       <section className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
-        <h2 className="text-2xl md:text-3xl font-bold">Recently Posted</h2>
+        <SectionTitle title="New Stories"/>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
-          <div className="flex flex-col h-max md:h-[400px] lg:h-[430px]">
-            <div className="h-[250px] bg-gray-400">
-              <Image
-                src={spacex}
-                alt="article-image"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col gap-1 h-full md:justify-between py-2">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">SpaceX Launces Its Space Rocket</h3>
-                <p className="text-sm md:text-base text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!</p>
-              </div>
-              <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={"#"}>Read More</Link>
-            </div>
-          </div>
-          <div className="flex flex-col h-max md:h-[400px] lg:h-[430px]">
-            <div className="h-[250px] bg-gray-400">
-              <Image
-                src={cat}
-                alt="article-image"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col gap-1 h-full md:justify-between py-2">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">Why Do Cats Purring?</h3>
-                <p className="text-sm md:text-base text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!</p>
-              </div>
-              <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={"#"}>Read More</Link>
-            </div>
-          </div>
-          <div className="flex flex-col h-max md:h-[400px] lg:h-[430px]">
-            <div className="h-[250px] bg-gray-400">
-              <Image
-                src={art}
-                alt="article-image"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col gap-1 h-full md:justify-between py-2">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">Art Expo In Russia</h3>
-                <p className="text-sm md:text-base text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!</p>
-              </div>
-              <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={"#"}>Read More</Link>
-            </div>
-          </div>
+          {tempStories.map((story) => (
+            <StoryCard key={story.id} story={story}/>
+          ))}
         </div>
-        <Link className="px-2 py-1 w-max bg-black text-white mx-auto" href={"#"}>See More</Link>
+        <SectionLink showLines={false}/>
       </section>
 
       {/* Banner */}
@@ -173,58 +110,13 @@ export default function Home() {
 
       {/* Editor's Choice */}
       <section className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
-        <h2 className="text-2xl md:text-3xl font-bold">Editor's Choice</h2>
+        <SectionTitle title="Editor's Choice"/>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
-          <div className="flex flex-col h-max md:h-[400px] lg:h-[430px]">
-            <div className="h-[250px] bg-gray-400">
-              <Image
-                src={spacex}
-                alt="article-image"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col gap-1 h-full md:justify-between py-2">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">SpaceX Launces Its Space Rocket</h3>
-                <p className="text-sm md:text-base text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!</p>
-              </div>
-              <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={"#"}>Read More</Link>
-            </div>
-          </div>
-          <div className="flex flex-col h-max md:h-[400px] lg:h-[430px]">
-            <div className="h-[250px] bg-gray-400">
-              <Image
-                src={cat}
-                alt="article-image"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col gap-1 h-full md:justify-between py-2">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">Why Do Cats Purring?</h3>
-                <p className="text-sm md:text-base text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!</p>
-              </div>
-              <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={"#"}>Read More</Link>
-            </div>
-          </div>
-          <div className="flex flex-col h-max md:h-[400px] lg:h-[430px]">
-            <div className="h-[250px] bg-gray-400">
-              <Image
-                src={art}
-                alt="article-image"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="flex flex-col gap-1 h-full md:justify-between py-2">
-              <div>
-                <h3 className="text-lg md:text-xl font-bold">Art Expo In Russia</h3>
-                <p className="text-sm md:text-base text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex possimus incidunt sint omnis atque voluptate hic officiis culpa molestiae magnam!</p>
-              </div>
-              <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={"#"}>Read More</Link>
-            </div>
-          </div>
+          {tempStories.map((story) => (
+            <StoryCard key={story.id} story={story}/>
+          ))}
         </div>
-        <Link className="px-2 py-1 w-max bg-black text-white mx-auto" href={"#"}>See More</Link>
+        <SectionLink/>
       </section>
     </>
   );
