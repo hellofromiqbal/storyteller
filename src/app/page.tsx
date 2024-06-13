@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       {/* Jumbotron */}
-      <section className="flex flex-col-reverse md:flex-row min-h-screen md:min-h-[70vh] lg:min-h-screen px-5 md:px-10 lg:px-20">
+      <section className="-mt-16 flex flex-col-reverse md:flex-row min-h-screen md:min-h-[70vh] lg:min-h-screen px-5 md:px-10 lg:px-20">
         <div className="flex-1 flex flex-col md:justify-center text-start gap-1 md:gap-2">
           <h1 className="text-3xl md:text-5xl font-bold">You're the storyteller we've been waiting for.</h1>
           <h2 className="md:text-xl lg:text-lg text-gray-600 lg:w-3/4">Let us read your best stories that inspire us every day!</h2>
@@ -40,7 +40,7 @@ export default function Home() {
       </section>
 
       {/* Trending Stories */}
-      <section className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
+      <section id="trendingStories" className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
         <SectionTitle title="Trending Stories"/>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
           {staticStories.map((story) => (
@@ -51,7 +51,7 @@ export default function Home() {
       </section>
 
       {/* New Stories */}
-      <section className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
+      <section id="newStories" className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
         <SectionTitle title="New Stories"/>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
           {staticStories.map((story) => (
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* Editor's Choice */}
-      <section className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
+      <section id="editorsChoice" className="flex flex-col gap-4 py-10 px-5 md:px-10 lg:px-20">
         <SectionTitle title="Editor's Choice"/>
         <div className="flex flex-col md:grid md:grid-cols-3 gap-4">
           {staticStories.map((story) => (

@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import {Navbar as NextUINavbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
 import { Button } from '@nextui-org/button';
 import { Link as NextUILink } from '@nextui-org/link';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,30 +24,30 @@ export default function Navbar() {
   ];
 
   return (
-    <NextUINavbar onMenuOpenChange={setIsMenuOpen} isBordered maxWidth='xl' className='absolute top-0 max-w-[1440px] mx-auto'>
+    <NextUINavbar onMenuOpenChange={setIsMenuOpen} isBordered maxWidth='xl' className='max-w-[1440px] mx-auto'>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand>
-          <h1 className='text-2xl font-extrabold'>Storyteller.</h1>
+          <Link href={"/"} className='text-2xl font-extrabold'>Storyteller.</Link>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <NextUILink href="#" className='text-black'>
-            Now Trending
+          <NextUILink href="#trendingStories" className='text-black'>
+            Trending Stories
           </NextUILink>
         </NavbarItem>
         <NavbarItem isActive>
-          <NextUILink href="#" className='text-black'>
-            Recently Added
+          <NextUILink href="#newStories" className='text-black'>
+            New Stories
           </NextUILink>
         </NavbarItem>
         <NavbarItem>
-          <NextUILink href="#" className='text-black'>
+          <NextUILink href="#editorsChoice" className='text-black'>
             Editor's Choice
           </NextUILink>
         </NavbarItem>
