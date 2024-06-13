@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} -mt-16`}>
         <Navbar/>
         <NextUiProvider>
           <main className="flex flex-col max-w-[1440px] mx-auto">

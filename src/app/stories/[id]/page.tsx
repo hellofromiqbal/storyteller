@@ -23,7 +23,7 @@ export default function page() {
       />
       <div className='flex flex-col gap-2'>
         {staticStories[storyId].textContent.map((paragraph: string, index: number) => (
-          <p key={index} className='text-justify indent-16'>{paragraph}</p>
+          <p key={index} className='text-justify indent-10 md:indent-16'>{paragraph}</p>
         ))}
       </div>
     </>
