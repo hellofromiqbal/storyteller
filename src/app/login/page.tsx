@@ -22,11 +22,11 @@ export default function Login() {
           <h2 className='md:hidden text-3xl font-bold'>Login</h2>
           <div className='flex flex-col gap-2'>
             <div className='flex flex-col gap-1'>
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email" className='font-medium'>Email:</label>
               <input id='email' type="email" className='px-2 py-1 border' />
             </div>
             <div className='flex flex-col gap-1'>
-              <label htmlFor="password">Password:</label>
+              <label htmlFor="password" className='font-medium'>Password:</label>
               <input id='password' type="password" className='px-2 py-1 border' />
             </div>
           </div>
