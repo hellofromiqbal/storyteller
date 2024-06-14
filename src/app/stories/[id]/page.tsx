@@ -17,23 +17,23 @@ export default function page() {
     <>
       <section className='flex flex-col gap-4'>
         <div className='flex flex-col gap-2'>
-          <h1 className='text-4xl md:text-5xl font-bold'>{staticStories[storyId].title}</h1>
-          <p className='text-lg text-gray-700 italic'>{staticStories[storyId].shortDesc}</p>
+          <h1 className='text-4xl md:text-5xl font-bold'>{staticStories[storyId-1].title}</h1>
+          <p className='text-lg text-gray-700 italic'>{staticStories[storyId-1].shortDesc}</p>
         </div>
         <div className='flex justify-between items-center'>
           <div className='flex flex-col ps-3 border-s-4 border-orange-300 w-max'>
-            <h3>By <Link href={"#"} className='font-bold'>Mark Ronson</Link></h3>
-            <p className='text-sm'>13 Jun 2024</p>
+            <h3>By <Link href={"#"} className='font-bold'>{staticStories[storyId-1].author}</Link></h3>
+            <p className='text-sm'>{staticStories[storyId-1].createdAt}</p>
           </div>
           <StoryInteractionButtons/>
         </div>
         <Image
-          src={staticStories[storyId].imgUrl}
+          src={staticStories[storyId-1].imgUrl}
           alt='story-img'
           className='w-full h-full object-cover object-center'
         />
         <div className='flex flex-col gap-2'>
-          {staticStories[storyId].textContent.map((paragraph: string, index: number) => (
+          {staticStories[storyId-1].textContent.map((paragraph: string, index: number) => (
             <p key={index} className='text-justify indent-10 md:indent-12'>{paragraph}</p>
           ))}
         </div>

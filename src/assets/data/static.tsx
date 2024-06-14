@@ -12,7 +12,8 @@ export const staticStories = [
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus esse fugiat molestiae quod vel aliquid quos distinctio nostrum mollitia ab possimus ea ipsum eius sed assumenda pariatur id culpa, ullam quae perferendis in ipsa a? Nam error dolor nobis quos, natus soluta quibusdam veniam velit aperiam illo molestias a, odio rem iste, omnis fugit! Nemo dolorum deleniti sequi saepe, ratione inventore in magni perspiciatis reprehenderit quibusdam, ullam vel officia quidem nobis. Autem consequuntur atque corrupti magnam, at illum. Nemo similique, vitae perspiciatis dolor saepe iste in deleniti et quis. Atque unde ad in perferendis possimus aut? Pariatur doloribus fugiat eligendi.'
     ],
     imgUrl: spacex,
-    href: "/stories/1"
+    author: 'Mark Ronson',
+    createdAt: '13 Jun 2024'
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ export const staticStories = [
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus esse fugiat molestiae quod vel aliquid quos distinctio nostrum mollitia ab possimus ea ipsum eius sed assumenda pariatur id culpa, ullam quae perferendis in ipsa a? Nam error dolor nobis quos, natus soluta quibusdam veniam velit aperiam illo molestias a, odio rem iste, omnis fugit! Nemo dolorum deleniti sequi saepe, ratione inventore in magni perspiciatis reprehenderit quibusdam, ullam vel officia quidem nobis. Autem consequuntur atque corrupti magnam, at illum. Nemo similique, vitae perspiciatis dolor saepe iste in deleniti et quis. Atque unde ad in perferendis possimus aut? Pariatur doloribus fugiat eligendi.'
     ],
     imgUrl: cat,
-    href: "/stories/1"
+    author: 'Olav Swain',
+    createdAt: '14 Jun 2024'
   },
   {
     id: 3,
@@ -34,7 +36,8 @@ export const staticStories = [
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus esse fugiat molestiae quod vel aliquid quos distinctio nostrum mollitia ab possimus ea ipsum eius sed assumenda pariatur id culpa, ullam quae perferendis in ipsa a? Nam error dolor nobis quos, natus soluta quibusdam veniam velit aperiam illo molestias a, odio rem iste, omnis fugit! Nemo dolorum deleniti sequi saepe, ratione inventore in magni perspiciatis reprehenderit quibusdam, ullam vel officia quidem nobis. Autem consequuntur atque corrupti magnam, at illum. Nemo similique, vitae perspiciatis dolor saepe iste in deleniti et quis. Atque unde ad in perferendis possimus aut? Pariatur doloribus fugiat eligendi.'
     ],
     imgUrl: art,
-    href: "/stories/1"
+    author: 'Marie Anderson',
+    createdAt: '15 Jun 2024'
   },
   {
     id: 4,
@@ -45,6 +48,7 @@ export const staticStories = [
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus esse fugiat molestiae quod vel aliquid quos distinctio nostrum mollitia ab possimus ea ipsum eius sed assumenda pariatur id culpa, ullam quae perferendis in ipsa a? Nam error dolor nobis quos, natus soluta quibusdam veniam velit aperiam illo molestias a, odio rem iste, omnis fugit! Nemo dolorum deleniti sequi saepe, ratione inventore in magni perspiciatis reprehenderit quibusdam, ullam vel officia quidem nobis. Autem consequuntur atque corrupti magnam, at illum. Nemo similique, vitae perspiciatis dolor saepe iste in deleniti et quis. Atque unde ad in perferendis possimus aut? Pariatur doloribus fugiat eligendi.'
     ],
     imgUrl: spacex,
-    href: "/stories/1"
+    author: 'Danillo Harris',
+    createdAt: '16 Jun 2024'
   },
 ];

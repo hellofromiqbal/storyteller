@@ -7,7 +7,8 @@ type Story = {
   title: string;
   shortDesc: string;
   imgUrl: StaticImageData;
-  href: string;
+  author: string;
+  createdAt: string;
 };
 
 type StoryCardProps = {
@@ -29,7 +30,7 @@ export default function StoryCard({ story }: StoryCardProps) {
           <h3 className="text-lg md:text-xl font-bold">{story.title}</h3>
           <p className="text-sm md:text-base text-gray-800">{story.shortDesc}</p>
         </div>
-        <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={story.href}>Read More</Link>
+        <Link className="w-max text-sm md:text-base text-black font-medium underline underline-offset-4" href={`/stories/${story.id}`}>Read More</Link>
       </div>
     </div>
   )
