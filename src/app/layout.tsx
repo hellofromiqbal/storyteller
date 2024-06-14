@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
 import NextUiProvider from "@/components/NextUIProvider/NextUIProvider";
+import Navbar from "@/components/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} -mt-16`}>
+      <body className={`${inter.className} -mt-[4.04rem]`}>
         <Navbar/>
         <NextUiProvider>
           <main className="flex flex-col max-w-[1440px] mx-auto">

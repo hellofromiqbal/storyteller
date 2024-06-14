@@ -54,10 +54,10 @@ export default function Navbar() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <NextUILink href="#" className='text-black'>Login</NextUILink>
+          <NextUILink href="/login" className='text-black'>Login</NextUILink>
         </NavbarItem>
         <NavbarItem>
-          <Button as={NextUILink} href="#" variant="flat" className='text-white bg-black'>
+          <Button as={NextUILink} href="/signup" variant="flat" className='text-white bg-black'>
             Sign Up
           </Button>
         </NavbarItem>
