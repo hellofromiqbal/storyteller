@@ -20,6 +20,13 @@ export default function page() {
           <h1 className='text-4xl md:text-5xl font-bold'>{staticStories[storyId].title}</h1>
           <p className='text-lg text-gray-700 italic'>{staticStories[storyId].shortDesc}</p>
         </div>
+        <div className='flex justify-between items-center'>
+          <div className='flex flex-col ps-3 border-s-4 border-orange-300 w-max'>
+            <h3>By <Link href={"#"} className='font-bold'>Mark Ronson</Link></h3>
+            <p className='text-sm'>13 Jun 2024</p>
+          </div>
+          <StoryInteractionButtons/>
+        </div>
         <Image
           src={staticStories[storyId].imgUrl}
           alt='story-img'
@@ -30,13 +37,9 @@ export default function page() {
             <p key={index} className='text-justify indent-10 md:indent-12'>{paragraph}</p>
           ))}
         </div>
-      </section>
-      <section className='flex justify-between items-center'>
-        <div className='flex flex-col ps-3 border-s-4 border-orange-300 w-max'>
-          <h3>By <Link href={"#"} className='font-bold'>Mark Ronson</Link></h3>
-          <p className='text-sm'>13 Jun 2024</p>
+        <div className='self-end'>
+          <StoryInteractionButtons/>
         </div>
-        <StoryInteractionButtons/>
       </section>
       <section className='md:hidden'>
         <div className='w-full h-[250px] flex justify-center items-center bg-gray-300'>
