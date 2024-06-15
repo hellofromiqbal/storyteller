@@ -2,9 +2,10 @@
 
 import { notifyFailed, notifySuccess } from '@/helpers/toaster';
 import { signUpFormSchema } from '@/helpers/zodSchema';
-import { db } from '@/libs/firebase';
+import { auth, db } from '@/libs/firebase';
 import type { newUser } from '@/libs/types';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { addDoc, collection } from 'firebase/firestore';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -18,12 +19,18 @@ export default function SignUpForm() {
   const handleNewUser = async (data: newUser) => {
     setIsSubmitting(true);
     try {
-      const newUserRef = await addDoc(collection(db, 'users'), {
+      // Create new user with Firebase Auth
+      const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password);
+      const user = userCredential.user;
+
+      // Add additional user data to Firestore Database
+      await addDoc(collection(db, 'users'), {
+        uid: user.uid,
         firstName: data.firstName,
         lastName: data.lastName,
         email: data.email,
-        password: data.password,
       });
+
       notifySuccess("User created successfully");
       reset();
     } catch (error) {
