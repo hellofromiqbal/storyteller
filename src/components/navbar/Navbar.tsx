@@ -37,29 +37,29 @@ export default function Navbar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <NextUILink href="#trendingStories" className='text-black'>
+          <Link href="#trendingStories" className='text-black'>
             Trending Stories
-          </NextUILink>
+          </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <NextUILink href="#newStories" className='text-black'>
+          <Link href="#newStories" className='text-black'>
             New Stories
-          </NextUILink>
+          </Link>
         </NavbarItem>
         <NavbarItem>
-          <NextUILink href="#editorsChoice" className='text-black'>
+          <Link href="#editorsChoice" className='text-black'>
             Editor's Choice
-          </NextUILink>
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <NextUILink href="/login" className='text-black'>Login</NextUILink>
+          <Link href="/login" className='text-black'>Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={NextUILink} href="/signup" variant="flat" className='text-white bg-black'>
+          <Link href="/signup" className='px-2 py-2 rounded-md text-white bg-black'>
             Sign Up
-          </Button>
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>

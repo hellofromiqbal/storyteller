@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import standing3 from '@/assets/images/avatar/standing3.png';
+import SignUpForm from '@/components/Forms/SignUpForm/SignUpForm';
 
 export default function SignUp() {
   return (
@@ -18,28 +19,9 @@ export default function SignUp() {
         </div>
       </section>
       <section className='flex-1 flex justify-center items-center'>
-        <form className='flex flex-col gap-4 w-4/5 mx-auto'>
-          <h2 className='md:hidden text-3xl font-bold'>Sign Up</h2>
-          <div className='flex flex-col gap-2'>
-            <div className='flex flex-col gap-1'>
-              <label htmlFor="fullname" className='font-medium'>Fullname:</label>
-              <input id='fullname' type="text" className='px-2 py-1 border' />
-            </div>
-            <div className='flex flex-col gap-1'>
-              <label htmlFor="email" className='font-medium'>Email:</label>
-              <input id='email' type="email" className='px-2 py-1 border' />
-            </div>
-            <div className='flex flex-col gap-1'>
-              <label htmlFor="password" className='font-medium'>Password:</label>
-              <input id='password' type="password" className='px-2 py-1 border' />
-            </div>
-            <div className='flex flex-col gap-1'>
-              <label htmlFor="confirmPassword" className='font-medium'>Confirm password:</label>
-              <input id='confirmPassword' type="confirmPassword" className='px-2 py-1 border' />
-            </div>
-          </div>
-          <button className='p-2 bg-green-500 text-white rounded-full'>Sign Up</button>
-        </form>
+        <div className='w-4/5 mx-auto'>
+          <SignUpForm/>
+        </div>
       </section>
     </div>
   )

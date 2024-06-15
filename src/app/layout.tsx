@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from 'react-hot-toast';
 import NextUiProvider from "@/components/NextUIProvider/NextUIProvider";
 import Navbar from "@/components/Navbar/Navbar";
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} -mt-[4.04rem]`}>
+        <Toaster/>
         <Navbar/>
         <NextUiProvider>
           <main className="flex flex-col max-w-[1440px] mx-auto">
