@@ -28,28 +28,38 @@ export default function Navbar() {
     <NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} isBordered maxWidth='xl' className='max-w-[1440px] mx-auto'>
       <NavbarContent>
         <NavbarBrand>
-          <Link href={"/"} className='text-2xl font-extrabold' onClick={handleMenuItemClick}>Storyteller.</Link>
+          <Link
+            href={"/"}
+            className='text-2xl font-extrabold'
+            onClick={handleMenuItemClick}
+          >Storyteller.</Link>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem isActive={selectedNavItem === 'trending'}>
-          <Link href="#trendingStories" className='text-black' onClick={() => handleNavItemClick('trending')}>
-            Trending
-          </Link>
+          <Link
+            href="#trendingStories"
+            className='text-black'
+            onClick={() => handleNavItemClick('trending')}
+          >Trending</Link>
         </NavbarItem>
         <NavbarItem isActive={selectedNavItem === 'new'}>
-          <Link href="#newStories" className='text-black' onClick={() => handleNavItemClick('new')}>
-            New
-          </Link>
+          <Link
+            href="#newStories"
+            className='text-black'
+            onClick={() => handleNavItemClick('new')}
+          >New</Link>
         </NavbarItem>
         <NavbarItem isActive={selectedNavItem === 'recommended'}>
-          <Link href="#editorsChoice" className='text-black' onClick={() => handleNavItemClick('recommended')}>
-            Recommended
-          </Link>
+          <Link
+            href="#editorsChoice"
+            className='text-black'
+            onClick={() => handleNavItemClick('recommended')}
+          >Recommended</Link>
         </NavbarItem>
       </NavbarContent>
-      
+
       <NavbarContent justify="end">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -59,9 +69,7 @@ export default function Navbar() {
           <Link href="/login" className='text-black'>Login</Link>
         </NavbarItem>
         <NavbarItem className='hidden md:flex'>
-          <Link href="/register" className='px-2 py-2 rounded-md text-white bg-black'>
-            Sign Up
-          </Link>
+          <Link href="/register" className='px-2 py-2 rounded-md text-white bg-black'>Sign Up</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
@@ -74,9 +82,7 @@ export default function Navbar() {
                 handleMenuItemClick();
                 handleNavItemClick(item.text);
               }}
-            >
-              {item.text}
-            </Link>
+            >{item.text}</Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
