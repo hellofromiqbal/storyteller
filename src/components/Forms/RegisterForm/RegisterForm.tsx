@@ -1,7 +1,7 @@
 'use client'
 
 import { notifyFailed, notifySuccess } from '@/helpers/toaster';
-import { signUpFormSchema } from '@/helpers/zodSchema';
+import { registerFormSchema } from '@/helpers/zodSchema';
 import { auth, db } from '@/libs/firebase';
 import type { newUser } from '@/libs/types';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,10 +11,10 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-type FormData = z.infer<typeof signUpFormSchema>;
+type FormData = z.infer<typeof registerFormSchema>;
 
-export default function SignUpForm() {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({ resolver: zodResolver(signUpFormSchema) });
+export default function RegisterForm() {
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({ resolver: zodResolver(registerFormSchema) });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleNewUser = async (data: newUser) => {
     setIsSubmitting(true);
@@ -43,7 +43,7 @@ export default function SignUpForm() {
 
   return (
     <form className='flex flex-col gap-4' onSubmit={handleSubmit(handleNewUser)}>
-      <h2 className='md:hidden text-3xl font-bold'>Sign Up</h2>
+      <h2 className='md:hidden text-3xl font-bold'>Register</h2>
       <div className='flex flex-col gap-2'>
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex flex-col gap-1'>

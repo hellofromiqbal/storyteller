@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import standing3 from '@/assets/images/avatar/standing3.png';
-import SignUpForm from '@/components/Forms/SignUpForm/SignUpForm';
+import RegisterForm from '@/components/Forms/RegisterForm/RegisterForm';
 
-export default function SignUp() {
+
+export default function Register() {
   return (
     <div className='md:min-h-screen flex'>
       <section className='flex-1 hidden md:flex justify-center items-center bg-orange-300'>
@@ -20,7 +21,7 @@ export default function SignUp() {
       </section>
       <section className='flex-1 flex justify-center items-center py-20 md:py-0'>
         <div className='w-4/5 mx-auto'>
-          <SignUpForm/>
+          <RegisterForm/>
         </div>
       </section>
     </div>

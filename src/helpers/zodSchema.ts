@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const signUpFormSchema = z.object({
+export const registerFormSchema = z.object({
   firstName: z.string({
     required_error: "First name is required.",
     invalid_type_error: "First name must be a string."
