@@ -72,7 +72,7 @@ export default function Navbar() {
           <Link href="/login" className='text-black'>Login</Link>
         </NavbarItem>
         <NavbarItem className='hidden md:flex'>
-          <Link href="/register" className='px-2 py-2 rounded-md text-white bg-black'>Sign Up</Link>
+          <Link href="/register" className='px-2 py-2 rounded-md text-white bg-black'>Register</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
