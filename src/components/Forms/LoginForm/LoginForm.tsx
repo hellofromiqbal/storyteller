@@ -5,6 +5,7 @@ import { loginFormSchema } from '@/helpers/zodSchema';
 import { auth } from '@/libs/firebase';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -12,6 +13,7 @@ import { z } from 'zod';
 type FormData = z.infer<typeof loginFormSchema>;
 
 export default function LoginForm() {
+  const router = useRouter();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({ resolver: zodResolver(loginFormSchema) });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -22,6 +24,7 @@ export default function LoginForm() {
       await signInWithEmailAndPassword(auth, data.email, data.password);
       notifySuccess("User logged in successfully");
       reset();
+      router.push("/dashboard");
     } catch (error) {
       console.error("Error logging in: ", error);
       notifyFailed("Invalid email or password");
