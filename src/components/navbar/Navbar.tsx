@@ -31,7 +31,10 @@ export default function Navbar() {
           <Link
             href={"/"}
             className='text-2xl font-extrabold'
-            onClick={handleMenuItemClick}
+            onClick={() => {
+              handleMenuItemClick();
+              handleNavItemClick('');
+            }}
           >Storyteller.</Link>
         </NavbarBrand>
       </NavbarContent>
