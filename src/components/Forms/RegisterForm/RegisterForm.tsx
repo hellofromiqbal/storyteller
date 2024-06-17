@@ -2,7 +2,7 @@
 
 import { notifyFailed, notifySuccess } from '@/helpers/toaster';
 import { registerFormSchema } from '@/helpers/zodSchema';
-import { auth, db } from '@/libs/firebase';
+import { auth, db } from '@/services/firebase';
 import type { newUser } from '@/libs/types';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
