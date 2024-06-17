@@ -19,10 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} -mt-[4.04rem]`}>
-        <Toaster/>
-        <Navbar/>
+      <body className={`${inter.className}`}>
         <NextUiProvider>
+          <Toaster/>
           <main className="flex flex-col max-w-[1440px] mx-auto">
             {children}
           </main>
