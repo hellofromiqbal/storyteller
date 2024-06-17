@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import { staticStories } from '@/assets/data/static';
-import SectionLink from '@/components/SectionLink/SectionLink';
 import StoryCard from '@/components/StoryCard/StoryCard';
 import React from 'react';
 

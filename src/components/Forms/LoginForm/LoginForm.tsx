@@ -24,7 +24,7 @@ export default function LoginForm() {
       await signInWithEmailAndPassword(auth, data.email, data.password);
       notifySuccess("User logged in successfully");
       reset();
-      router.push("/dashboard");
+      router.push("/dashboard/for-you");
     } catch (error) {
       console.error("Error logging in: ", error);
       notifyFailed("Invalid email or password");
