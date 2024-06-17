@@ -2,15 +2,15 @@
 'use client'
 
 import React, { useState } from 'react';
-import {Navbar as NextUINavbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
 import Link from 'next/link';
+import {Navbar as NextUINavbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedNavItem, setSelectedNavItem] = useState('');
-    const handleNavItemClick = (navItem: string) => {
-      setSelectedNavItem(navItem);
-    };
+  const handleNavItemClick = (navItem: string) => {
+    setSelectedNavItem(navItem);
+  };
 
   const handleMenuItemClick = () => {
     setIsMenuOpen(false);

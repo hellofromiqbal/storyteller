@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
+import React from 'react';
 import { staticStories } from '@/assets/data/static';
 import StoryCard from '@/components/StoryCard/StoryCard';
-import React from 'react';
 
 export default function Dashboard() {
   return (

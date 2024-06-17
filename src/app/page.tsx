@@ -11,12 +11,11 @@ import { staticStories } from "@/assets/data/static";
 import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
-
   return (
     <>
       {/* Home Navbar */}
       <Navbar/>
-      
+
       {/* Jumbotron */}
       <section className="flex flex-col-reverse md:flex-row min-h-screen md:min-h-[70vh] lg:min-h-screen px-5 md:px-10 lg:px-20">
         <div className="flex-1 flex flex-col md:justify-center text-start gap-1 md:gap-2">
