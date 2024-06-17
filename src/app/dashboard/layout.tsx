@@ -8,7 +8,7 @@ export default function layout({children}: {children: React.ReactNode}) {
           <li className='font-bold m:text-lg'><a href="#following">For You</a></li>
           <li className='m:text-lg'><a href="#forYou">Following</a></li>
         </ul>
-        <span className='w-[40px] h-[40px] bg-black rounded-full'>
+        <span className='w-[35px] md:w-[40px] h-[35px] md:h-[40px] bg-black rounded-full'>
         </span>
       </div>
       <div className='flex flex-col gap-4 py-5 px-5 md:px-10 lg:px-20'>
