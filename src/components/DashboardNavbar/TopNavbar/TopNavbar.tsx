@@ -9,7 +9,7 @@ export default function TopNavbar() {
   const pathName = usePathname();
 
   return (
-    <div className='h-16 bg-white sticky top-0 flex justify-between items-center px-5 md:px-10 lg:px-20 border-b-1'>
+    <div className={`${pathName !== '/dashboard/for-you' && pathName !== '/dashboard/following' ? 'hidden' : ''} h-16 bg-white sticky top-0 flex justify-between items-center px-5 md:px-10 lg:px-20 border-b-1`}>
       <ul className='w-full md:w-max h-full flex justify-evenly'>
         <li className='w-full h-full'>
           <Link

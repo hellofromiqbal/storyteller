@@ -1,14 +1,15 @@
 import React from 'react';
 import TopNavbar from '@/components/DashboardNavbar/TopNavbar/TopNavbar';
+import BottomNavbar from '@/components/DashboardNavbar/BottomNavbar/BottomNavbar';
 
 export default function layout({children}: {children: React.ReactNode}) {
   return (
     <div className='flex flex-col'>
       <TopNavbar/>
-      <div className='flex flex-col gap-4 py-5 px-5 md:px-10 lg:px-20'>
+      <div className='flex flex-col gap-4 pt-5 pb-20 md:pb-5 px-5 md:px-10 lg:px-20'>
         {children}
       </div>
-      {/* <FloatWriteButton/> */}
+      <BottomNavbar/>
     </div>
   )
 }
