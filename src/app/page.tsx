@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       {/* Home Navbar */}
-      <Navbar/>
+      {/* <Navbar/> */}
 
       {/* Jumbotron */}
       <section className="flex flex-col-reverse md:flex-row min-h-screen md:min-h-[70vh] lg:min-h-screen px-5 md:px-10 lg:px-20">
