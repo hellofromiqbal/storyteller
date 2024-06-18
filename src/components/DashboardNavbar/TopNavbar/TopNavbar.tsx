@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BsFeather } from 'react-icons/bs';
 
-export default function DashboardNavbar() {
+export default function TopNavbar() {
   const pathName = usePathname();
 
   return (
