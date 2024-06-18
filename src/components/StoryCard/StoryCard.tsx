@@ -25,7 +25,7 @@ export default function StoryCard({ story }: StoryCardProps) {
           className="w-full h-full"
         />
       </div>
-      <div className="flex flex-col gap-1 h-full md:justify-between py-2">
+      <div className="flex flex-col gap-1 h-full md:justify-between py-2 px-2 md:px-0">
         <div>
           <h3 className="text-lg md:text-xl font-bold">{story.title}</h3>
           <p className="text-sm md:text-base text-gray-800">{story.shortDesc}</p>

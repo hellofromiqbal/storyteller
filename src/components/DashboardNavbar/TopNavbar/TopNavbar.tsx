@@ -9,7 +9,7 @@ export default function TopNavbar() {
   const pathName = usePathname();
 
   return (
-    <div className={`${pathName !== '/dashboard/for-you' && pathName !== '/dashboard/following' ? 'hidden' : ''} h-16 bg-white sticky top-0 flex justify-between items-center px-5 md:px-10 lg:px-20 border-b-1`}>
+    <div className={`${pathName !== '/dashboard/for-you' && pathName !== '/dashboard/following' ? 'hidden' : ''} h-16 bg-white sticky top-0 flex justify-between items-center md:px-10 lg:px-20 border-b-1`}>
       <ul className='w-full md:w-max h-full flex justify-evenly'>
         <li className='w-full h-full'>
           <Link
@@ -28,7 +28,7 @@ export default function TopNavbar() {
         <Link href={"/dashboard/write"} className='text-3xl'>
           <BsFeather/>
         </Link>
-        <Link href={"/dashboard/profile"} className='w-[35px] md:w-[40px] h-[35px] md:h-[40px] bg-gray-100 rounded-full border-2 border-gray-200'>
+        <Link href={"/dashboard/profile"} className='md:w-[40px] md:h-[40px] bg-gray-100 rounded-full border-2 border-gray-200'>
         </Link>
       </div>
     </div>
