@@ -1,26 +1,36 @@
 'use client'
 
 import React from 'react';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { BsFeather } from 'react-icons/bs';
 
 export default function DashboardNavbar() {
   const pathName = usePathname();
-  
+
   return (
-    <ul className='w-full md:w-max h-full flex justify-evenly'>
-      <li className='w-full h-full'>
-        <Link
-          href={"/dashboard/for-you"}
-          className={`md:px-5 w-full h-full flex justify-center items-center md:text-lg ${pathName === "/dashboard/for-you" && 'font-bold border-b-2 border-blue-600'}`}
-        >For You</Link>
-      </li>
-      <li className='w-full h-full'>
-        <Link
-          href={"/dashboard/following"}
-          className={`md:px-5 w-full h-full flex justify-center items-center md:text-lg ${pathName === "/dashboard/following" && 'font-bold border-b-2 border-blue-600'}`}
-        >Following</Link>
-      </li>
-    </ul>
+    <div className='h-16 bg-white sticky top-0 flex justify-between items-center px-5 md:px-10 lg:px-20 border-b-1'>
+      <ul className='w-full md:w-max h-full flex justify-evenly'>
+        <li className='w-full h-full'>
+          <Link
+            href={"/dashboard/for-you"}
+            className={`md:px-5 w-full h-full flex justify-center items-center md:text-lg ${pathName === "/dashboard/for-you" && 'font-bold border-b-2 border-blue-600'}`}
+          >For You</Link>
+        </li>
+        <li className='w-full h-full'>
+          <Link
+            href={"/dashboard/following"}
+            className={`md:px-5 w-full h-full flex justify-center items-center md:text-lg ${pathName === "/dashboard/following" && 'font-bold border-b-2 border-blue-600'}`}
+          >Following</Link>
+        </li>
+      </ul>
+      <div className='hidden md:flex gap-10'>
+        <button className='text-3xl'>
+          <BsFeather/>
+        </button>
+        <span className='w-[35px] md:w-[40px] h-[35px] md:h-[40px] bg-black rounded-full'>
+        </span>
+      </div>
+    </div>
   )
 }
