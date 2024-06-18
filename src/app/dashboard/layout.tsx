@@ -1,5 +1,4 @@
 import React from 'react';
-import FloatWriteButton from '@/components/FloatWriteButton/FloatWriteButton';
 import DashboardNavbar from '@/components/DashboardNavbar/DashboardNavbar';
 
 export default function layout({children}: {children: React.ReactNode}) {
@@ -9,7 +8,7 @@ export default function layout({children}: {children: React.ReactNode}) {
       <div className='flex flex-col gap-4 py-5 px-5 md:px-10 lg:px-20'>
         {children}
       </div>
-      <FloatWriteButton/>
+      {/* <FloatWriteButton/> */}
     </div>
   )
 }

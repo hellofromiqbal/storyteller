@@ -24,12 +24,12 @@ export default function DashboardNavbar() {
           >Following</Link>
         </li>
       </ul>
-      <div className='hidden md:flex gap-10'>
-        <button className='text-3xl'>
+      <div className='hidden md:flex items-center gap-10'>
+        <Link href={"/dashboard/write"} className='text-3xl'>
           <BsFeather/>
-        </button>
-        <span className='w-[35px] md:w-[40px] h-[35px] md:h-[40px] bg-black rounded-full'>
-        </span>
+        </Link>
+        <Link href={"/dashboard/profile"} className='w-[35px] md:w-[40px] h-[35px] md:h-[40px] bg-gray-100 rounded-full border-2 border-gray-200'>
+        </Link>
       </div>
     </div>
   )
