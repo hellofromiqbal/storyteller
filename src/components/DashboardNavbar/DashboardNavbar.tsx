@@ -8,17 +8,17 @@ export default function DashboardNavbar() {
   const pathName = usePathname();
   
   return (
-    <ul className='flex gap-5 md:gap-10'>
-      <li>
+    <ul className='w-full md:w-max h-full flex justify-evenly'>
+      <li className='w-full h-full'>
         <Link
           href={"/dashboard/for-you"}
-          className={`${pathName === "/dashboard/for-you" && 'font-bold'} m:text-lg`}
+          className={`md:px-5 w-full h-full flex justify-center items-center md:text-lg ${pathName === "/dashboard/for-you" && 'font-bold border-b-2 border-blue-600'}`}
         >For You</Link>
       </li>
-      <li>
+      <li className='w-full h-full'>
         <Link
           href={"/dashboard/following"}
-          className={`${pathName === "/dashboard/following" && 'font-bold'} m:text-lg`}
+          className={`md:px-5 w-full h-full flex justify-center items-center md:text-lg ${pathName === "/dashboard/following" && 'font-bold border-b-2 border-blue-600'}`}
         >Following</Link>
       </li>
     </ul>
