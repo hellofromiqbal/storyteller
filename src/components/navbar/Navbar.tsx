@@ -40,18 +40,16 @@ export default function Navbar() {
       className='max-w-[1440px] mx-auto fixed top-0'
       isBordered
     >
-      <NavbarContent>
-        <NavbarBrand>
-          <Link
-            href={"/"}
-            className='text-2xl font-extrabold'
-            onClick={() => {
-              handleMenuItemClick();
-              handleNavItemClick('');
-            }}
-          >Storyteller.</Link>
-        </NavbarBrand>
-      </NavbarContent>
+      <NavbarBrand>
+        <Link
+          href={"/"}
+          className='text-2xl font-extrabold'
+          onClick={() => {
+            handleMenuItemClick();
+            handleNavItemClick('');
+          }}
+        >Storyteller.</Link>
+      </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem isActive={selectedNavItem === 'trending'}>
@@ -78,10 +76,11 @@ export default function Navbar() {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
+        <NavbarItem className="hidden md:flex">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          />
+        </NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Link href="/login" className='text-black'>Login</Link>
         </NavbarItem>
