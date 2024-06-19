@@ -20,7 +20,7 @@ export default function WriteStoryForm() {
         <textarea
           name="textContent"
           id="textContent"
-          className='px-2 py-1 border rounded-md resize-x-none min-h-[150px] md:min-h-[250px]'
+          className='px-2 py-1 border rounded-md resize-x-none min-h-[150px] md:min-h-[250px] lg:min-h-[200px]'
         ></textarea>
       </div>
       <button className='w-full py-2 bg-green-500 text-white rounded-full'>Post</button>
