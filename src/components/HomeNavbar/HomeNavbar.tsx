@@ -57,12 +57,12 @@ export default function HomeNavbar() {
             onClick={() => handleNavItemClick('trending')}
           >Trending</Link>
         </NavbarItem>
-        <NavbarItem isActive={selectedNavItem === 'new'}>
+        <NavbarItem isActive={selectedNavItem === 'dashboard'}>
           <Link
-            href="#newStories"
+            href="/dashboard/for-you"
             className='text-black'
-            onClick={() => handleNavItemClick('new')}
-          >New</Link>
+            onClick={() => handleNavItemClick('dashboard')}
+          >Dashboard</Link>
         </NavbarItem>
         <NavbarItem isActive={selectedNavItem === 'recommended'}>
           <Link
