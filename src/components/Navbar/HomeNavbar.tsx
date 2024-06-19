@@ -76,7 +76,7 @@ export default function HomeNavbar() {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarItem className="hidden md:flex">
+        <NavbarItem className="md:hidden">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           />
