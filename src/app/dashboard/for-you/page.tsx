@@ -5,7 +5,7 @@ import StoryCard from '@/components/StoryCard/StoryCard';
 
 export default function ForYou() {
   return (
-    <section className="flex flex-col md:grid md:grid-cols-3 gap-4">
+    <section className="flex flex-col md:grid md:grid-cols-3 gap-4 md:py-5">
       {staticStories.map((story) => (
         <StoryCard key={story.id} story={story}/>
       ))}
