@@ -3,7 +3,15 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import {Navbar as NextUINavbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
+import {
+  Navbar as NextUINavbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem
+} from "@nextui-org/navbar";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +33,13 @@ export default function Navbar() {
   ];
 
   return (
-    <NextUINavbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} isBordered maxWidth='xl' className='max-w-[1440px] mx-auto fixed top-0'>
+    <NextUINavbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      maxWidth='xl'
+      className='max-w-[1440px] mx-auto fixed top-0'
+      isBordered
+    >
       <NavbarContent>
         <NavbarBrand>
           <Link

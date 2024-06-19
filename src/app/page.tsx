@@ -8,13 +8,13 @@ import StoryCard from "@/components/StoryCard/StoryCard";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import SectionLink from "@/components/SectionLink/SectionLink";
 import { staticStories } from "@/assets/data/static";
-// import Navbar from "@/components/Navbar/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
   return (
     <>
       {/* Home Navbar */}
-      {/* <Navbar/> */}
+      <Navbar/>
 
       {/* Jumbotron */}
       <section className="flex flex-col-reverse md:flex-row min-h-screen md:min-h-[70vh] lg:min-h-screen px-5 md:px-10 lg:px-20">
