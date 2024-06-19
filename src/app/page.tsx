@@ -8,7 +8,7 @@ import StoryCard from "@/components/StoryCard/StoryCard";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import SectionLink from "@/components/SectionLink/SectionLink";
 import { staticStories } from "@/assets/data/static";
-import HomeNavbar from "@/components/Navbar/HomeNavbar";
+import HomeNavbar from "@/components/HomeNavbar/HomeNavbar";
 export default function Home() {
   return (
     <>

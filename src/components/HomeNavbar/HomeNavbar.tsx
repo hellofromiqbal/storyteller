@@ -25,9 +25,7 @@ export default function HomeNavbar() {
   };
 
   const menuItems = [
-    { text: 'trending', href: '/trending' },
-    { text: 'new', href: '/new' },
-    { text: 'recommended', href: '/recommended' },
+    { text: 'dashboard', href: '/dashboard/for-you' },
     { text: 'register', href: '/register' },
     { text: 'login', href: '/login' },
   ];
