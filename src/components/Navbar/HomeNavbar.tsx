@@ -13,7 +13,7 @@ import {
   NavbarMenuItem
 } from "@nextui-org/navbar";
 
-export default function Navbar() {
+export default function HomeNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedNavItem, setSelectedNavItem] = useState('');
   const handleNavItemClick = (navItem: string) => {
