@@ -21,7 +21,7 @@ export default function ProfileContent() {
   return (
     <div className='flex flex-col'>
       <ProfileContentNavigation selectedNavigation={selectedNavigation} handleSelectedNavigation={handleSelectedNavigation}/>
-      <section className="flex flex-col md:grid md:grid-cols-3 gap-4 md:py-5">
+      <section className="flex flex-col md:grid md:grid-cols-3 gap-4 md:py-5 min-h-screen">
         {profileContents[selectedNavigation]}
       </section>
     </div>
