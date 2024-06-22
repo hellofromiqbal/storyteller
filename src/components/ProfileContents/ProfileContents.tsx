@@ -7,7 +7,7 @@ import ProfileContentLikes from './ProfileContentLikes/ProfileContentLikes';
 import ProfileContentArchived from './ProfileContentArchived/ProfileContentArchived';
 import { type NavigationOptions } from '@/libs/types';
 
-export default function ProfileContent() {
+export default function ProfileContents() {
   const [selectedNavigation, setSelectedNavigation] = useState<NavigationOptions>('stories');
   const handleSelectedNavigation = (navigation: NavigationOptions) => {
     setSelectedNavigation((prev) => (prev = navigation));
