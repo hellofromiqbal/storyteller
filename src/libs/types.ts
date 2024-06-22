@@ -5,3 +5,10 @@ export type newUser = {
   password: string;
   confirmPassword: string;
 };
+
+export type NavigationOptions = 'stories' | 'likes' | 'archived';
+
+export type ProfileContentNavigationProps = {
+  selectedNavigation: string;
+  handleSelectedNavigation: (navigation: NavigationOptions) => void;
+};
